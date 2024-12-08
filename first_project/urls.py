@@ -17,9 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from first.views import index_page
+from first.views import index_page, riddle_page, answer_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_page),
+    path('riddle/', riddle_page),
+    path('answer/', answer_page)
 ]

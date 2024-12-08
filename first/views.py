@@ -14,3 +14,15 @@ def index_page(request):
         "current_time": formatted_time
     }
     return render(request, "index.html", context)
+def riddle_page(request):
+    context = {
+        "title": "Курс 'Промышленное программирование'",
+        "riddle": "Сидит в темнице, красная девица, а коса на улице.",
+    }
+    return render(request, "riddle.html", context)
+def answer_page(request):
+    context = {
+        "title": "Курс 'Промышленное программирование'",
+        "answer": "Морковь.",
+    }
+    return render(request, "answer.html", context)
