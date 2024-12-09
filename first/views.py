@@ -18,11 +18,13 @@ def riddle_page(request):
     context = {
         "title": "Курс 'Промышленное программирование'",
         "riddle": "Сидит в темнице, красная девица, а коса на улице.",
+        "url1": "http://127.0.0.1:8000/answer"
     }
     return render(request, "riddle.html", context)
 def answer_page(request):
     context = {
         "title": "Курс 'Промышленное программирование'",
         "answer": "Морковь.",
+        "url2": "http://127.0.0.1:8000/riddle"
     }
     return render(request, "answer.html", context)
